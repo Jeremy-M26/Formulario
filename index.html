@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario en HTML</title>
+    <link href="/css/styles.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <h1>Registro de datos civiles</h1>
+
+        <form method="post" > <!--Usar comando method="POST" para que no se vea el contenido en el URL--><!--Otros atributos= target="_blank" autocomplete="off/on" action="url_destino"-->
+        <fieldset>
+            <legend>Datos personales:</legend>
+
+            <label for="idpersona" >No. de identificacion:</label><br/>
+            <input type="text" id="idpersona" name="idpersona" placeholder="Ej: 01300213521 (NO USAR GUIONES)" pattern="[0-9]{11,}" autocomplete="off" required="true"/>
+
+            <input type="hidden" id="idoculto" name="idoculto" value="1234" required="true"/><br/>
+
+            <label for="nombre" >Nombre:</label><br/>
+            <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" autocomplete="off" required="true"/><br/>
+
+            <label for="apellido" >Apellido:</label><br/>
+            <input type="text" id="apellido" name="apellido" placeholder="Escribe tu apellido" autocomplete="off" required="true"/><br/>
+
+            <label for="edad">Fecha de nacimiento:</label><br/>
+            <input type="date" id="edad" name="edad" min="1920-01-01" max="2004-12-31" required="true"/><br/>
+
+            <label>Sexo:</label><br/>
+            <input type="radio" id="masculino" name="sexo" value="masculino" required="true"/>
+            <label for="masculino">Masculino</label><br/>
+            <input type="radio" id="femenino" name="sexo" value="femenino" required="true"/>
+            <label for="femenino">Femenino</label><br/>
+
+            <label>Estado civil:</label><br/>
+            <input type="radio" id="soltero" name="estado_civil" value="soltero" required="true"/>
+            <label for="soltero">Soltero</label><br/>
+            <input type="radio" id="casado" name="estado_civil" value="casado" required="true"/>
+            <label for="casado">Casado</label><br/>
+
+            <label>Tipo de sangre:</label><br/>           
+            <input type="radio" id="indeterminada" name="sangre" value="indeterminada" required="true"/>
+            <label for="indeterminada">Indeterminada</label><br/>
+
+            <input type="radio" id="sangre_a" name="sangre" value="sangre_a" required="true"/>
+            <label for="sangre_a">A</label><br/>
+            <input type="radio" id="sangre_b" name="sangre" value="sangre_b" required="true"/>
+            <label for="sangre_b">B</label><br/>
+            <input type="radio" id="ab" name="sangre" value="sangre_ab" required="true"/>
+            <label for="sangre_ab">AB</label><br/>
+            <input type="radio" id="o" name="sangre" value="sangre_o" required="true"/>
+            <label for="sangre_o">O</label><br/>
+
+            <label for="nacimiento">Lugar de nacimiento:</label><br/>
+            <select name="nacimiento" id="nacimiento" required="true">
+            <option value="azua">Azúa</option>
+            <option value="baoruco">Baoruco</option>
+            <option value="barahona">Barahona</option>
+            <option value="dajabón">Dajabón</option>
+            <option value="distrito_nacional">Distrito Nacional</option>
+            <option value="duarte">Duarte</option>
+            <option value="elias_pina">Elías Pina</option>
+            <option value="el_seibo">El Seibo</option>
+            <option value="espaillat">Espaillat</option>
+            <option value="hato_mayor">Hato Mayor</option>
+            <option value="independencia">Independencia</option>
+            <option value="la_altagracia">La Altagracia</option>
+            <option value="la_romana">La Vega</option>
+            <option value="maria_trinidad_sanchez">Maria Trinidad Sanchez</option>
+            <option value="monsenor_nouel">Monseñor Nouel</option>
+            <option value="monte_cristi">Monte Cristi</option>
+            <option value="monte_plata">Monte Plata</option>
+            <option value="pedernales">Pedernales</option>
+            <option value="peravia">Peravia</option>
+            <option value="puerto_plata">Puerto Plata</option>
+            <option value="salcedo">Salcedo</option>
+            <option value="samana">Samana</option>
+            <option value="sanchez_ramirez">Sánchez Ramírez</option>
+            <option value="san_cristobal">San Cristobal</option>
+            <option value="san_jose_de_ocoa"> San Jose de Ocoa</option>
+            <option value="san_juan">San Juan</option>
+            <option value="san_pedro_de_macoris">San Pedro de Macorís</option>
+            <option value="santiago">Santiago</option>
+            <option value="santiago_rodriguez">Santiago Rodríguez</option>
+            <option value="santo_domingo">Santo Domingo</option>
+            <option value="valverde">Valverde</option>
+            </select><br/>
+
+            <label for="direccion">Direccion de residencia:</label><br/>
+            <input type="text" id="direccion" name="direccion" placeholder="Direccion y provincia de residencia actual" autocomplete="off" required="true"/><br/>
+
+            <input type="submit" value="Enviar formulario"/></a><br/>
+            <input type="reset" value="Restablecer formulario" />
+              
+        </fieldset>
+    </form>
+</body>
+</html>
