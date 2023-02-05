@@ -4,9 +4,9 @@
 }
 
 body{
-    background-color: dodgerblue;
-    color: white;
     background-image: url("/img/fondo2.jpg");
+    background-color: #e0a750;
+    color: white;
     background-repeat: no-repeat;
     background-size: 100%;
     background-attachment: fixed;
