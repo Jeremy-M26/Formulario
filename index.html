@@ -5,54 +5,72 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario en HTML</title>
-    <link href="/css/styles.css" rel="stylesheet" type="text/css" />
+    <link href="css/styles.css" media="all" rel="stylesheet" type="text/css" />
 </head>
 <body>
-    <h1>Registro de datos civiles</h1>
+    <h1 id="titulo_1">Registro de datos civiles</h1>
 
-        <form method="post" > <!--Usar comando method="POST" para que no se vea el contenido en el URL--><!--Otros atributos= target="_blank" autocomplete="off/on" action="url_destino"-->
-        <fieldset>
-            <legend>Datos personales:</legend>
+    <a id="logo1" href="https://jce.gob.do/"><img src="img/logo.jpg" alt="JCE" ></a>
 
-            <label for="idpersona" >No. de identificacion:</label><br/>
+    <div class="contenedor">
+        <form id="formu" method="post" action="registro.php" > <!--Usar comando method="POST" para que no se vea el contenido en el URL--><!--Otros atributos= target="_blank" autocomplete="off/on" action="url_destino"-->
+
+            <legend class="titulo_2" >Datos personales</legend>
+
+            <div class="cuadrados1">
+            <label for="idpersona" >No. de identificacion:</label></br>
             <input type="text" id="idpersona" name="idpersona" placeholder="Ej: 01300213521 (NO USAR GUIONES)" pattern="[0-9]{11,}" autocomplete="off" required="true"/>
+            </div>
 
-            <input type="hidden" id="idoculto" name="idoculto" value="1234" required="true"/><br/>
+            <input type="hidden" id="idoculto" name="idoculto" value="1234" required="true"/>
 
-            <label for="nombre" >Nombre:</label><br/>
-            <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" autocomplete="off" required="true"/><br/>
+            <div class="cuadrados1">
+            <label for="nombre" >Nombre:</label></br>
+            <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" autocomplete="off" required="true"/>
+            </div>
 
+            <div class="cuadrados1">
             <label for="apellido" >Apellido:</label><br/>
-            <input type="text" id="apellido" name="apellido" placeholder="Escribe tu apellido" autocomplete="off" required="true"/><br/>
+            <input type="text" id="apellido" name="apellido" placeholder="Escribe tu apellido" autocomplete="off" required="true"/>
+            </div>
 
+            <div class="cuadrados1">
             <label for="edad">Fecha de nacimiento:</label><br/>
-            <input type="date" id="edad" name="edad" min="1920-01-01" max="2004-12-31" required="true"/><br/>
+            <input type="date" id="edad" name="edad" min="1920-01-01" max="2004-12-31" required="true"/>
+            </div>
 
+            <div class="cuadrados2">
             <label>Sexo:</label><br/>
             <input type="radio" id="masculino" name="sexo" value="masculino" required="true"/>
-            <label for="masculino">Masculino</label><br/>
+            <label for="masculino">Masculino</label>
             <input type="radio" id="femenino" name="sexo" value="femenino" required="true"/>
-            <label for="femenino">Femenino</label><br/>
+            <label for="femenino">Femenino</label>
+            </div>
 
+            <div class="cuadrados2">
             <label>Estado civil:</label><br/>
-            <input type="radio" id="soltero" name="estado_civil" value="soltero" required="true"/>
-            <label for="soltero">Soltero</label><br/>
-            <input type="radio" id="casado" name="estado_civil" value="casado" required="true"/>
-            <label for="casado">Casado</label><br/>
+            <input type="radio" id="soltero" name="estadocivil" value="soltero" required="true"/>
+            <label for="soltero">Soltero</label>
+            <input type="radio" id="casado" name="estadocivil" value="casado" required="true"/>
+            <label for="casado">Casado</label>
+            </div>
 
+            <div class="cuadrados2">
             <label>Tipo de sangre:</label><br/>           
             <input type="radio" id="indeterminada" name="sangre" value="indeterminada" required="true"/>
-            <label for="indeterminada">Indeterminada</label><br/>
+            <label for="indeterminada">Indeterminada</label>
 
             <input type="radio" id="sangre_a" name="sangre" value="sangre_a" required="true"/>
-            <label for="sangre_a">A</label><br/>
+            <label for="sangre_a">A</label>
             <input type="radio" id="sangre_b" name="sangre" value="sangre_b" required="true"/>
             <label for="sangre_b">B</label><br/>
-            <input type="radio" id="ab" name="sangre" value="sangre_ab" required="true"/>
-            <label for="sangre_ab">AB</label><br/>
-            <input type="radio" id="o" name="sangre" value="sangre_o" required="true"/>
+            <input type="radio" id="sangre_ab" name="sangre" value="sangre_ab" required="true"/>
+            <label for="sangre_ab">AB</label>
+            <input type="radio" id="sangre_o" name="sangre" value="sangre_o" required="true"/>
             <label for="sangre_o">O</label><br/>
+            </div>
 
+            <div class="cuadrados2">
             <label for="nacimiento">Lugar de nacimiento:</label><br/>
             <select name="nacimiento" id="nacimiento" required="true">
             <option value="azua">Azúa</option>
@@ -86,15 +104,27 @@
             <option value="santiago_rodriguez">Santiago Rodríguez</option>
             <option value="santo_domingo">Santo Domingo</option>
             <option value="valverde">Valverde</option>
-            </select><br/>
+            </select>
+            </div>
 
+            <div class="cuadrados1">
             <label for="direccion">Direccion de residencia:</label><br/>
-            <input type="text" id="direccion" name="direccion" placeholder="Direccion y provincia de residencia actual" autocomplete="off" required="true"/><br/>
+            <input type="text" id="direccion" name="direccion" placeholder="Direccion y provincia de residencia actual" autocomplete="off" required="true"/>
+            </div>
 
-            <input type="submit" value="Enviar formulario"/></a><br/>
-            <input type="reset" value="Restablecer formulario" />
-              
-        </fieldset>
+            <div class="cuadrados1">
+            <label for="cedula">Adjunta una imagen de tu documento de identidad: *</label><br/>
+            <input type="file" id="cedula" name="cedula" required="true" accept="image/png, image/jpeg">
+            </div>
+
+            <div class="submit_1_2">
+            <input type="submit" value="Enviar formulario"/>
+            <input type="reset" value="Restablecer formulario"/>
+            </div>
+        
     </form>
+
+    </div>
+
 </body>
 </html>

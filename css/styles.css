@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: dodgerblue;
+    color: white;
+    background-image: url("/img/fondo2.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+}
+#logo1{
+    margin-left: 700px;
+    padding: 0;
+    
+}
+
+html{
+    height: 100%;
+}
+
+#titulo_1{
+    color: black;
+    text-align: center;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.contenedor{
+    float: left;
+    margin: 0px 25px 0px 25px ;
+    background-color: #ffffffad;
+    height: 100%;
+    width: 400px;
+    padding: 30px;
+    box-shadow: rgba(0, 0, 0, 0.459) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.contenedor .titulo_2{
+    margin: 0 0 10px;
+    padding: 0;
+    font-size: 30px;
+    color: #000000;
+    text-align: center;
+}
+
+.contenedor .cuadrados1 label{
+    color: #000000;
+    font-family: 'Segoe UI';
+}
+.contenedor .cuadrados2 label{
+    color: #000000;
+    font-family: 'Segoe UI';
+}
+
+.contenedor .cuadrados1 input{
+    width: 100%;
+    padding: 0px;
+    background: transparent;
+    color: #747474;
+    border: none;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    margin-bottom: 5px;
+}
+
+.contenedor .cuadrados2 input{
+    padding: 0px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    margin-bottom: 5px;
+}
+
+.cuadrados1{
+    text-align: left;
+}
+
+.submit_1_2 input[type="submit"]{
+    text-align: left;
+    background-color: #25aaf7;
+    overflow: hidden;
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    letter-spacing: 0px;
+    padding: 10px;
+    margin-top: 15px;
+}
+.submit_1_2 input[type="reset"]{
+    text-align: right;
+    background-color: #f72525;
+    overflow: hidden;
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    letter-spacing: 0px;
+    padding: 10px;
+    margin-top: 15px;
+}
+input[type="submit"]:hover{
+    background-color: #25aaf781;
+}
+input[type="reset"]:hover{
+    background-color: #f7252581;
+}
